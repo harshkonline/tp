@@ -1,0 +1,170 @@
+
+    <!--include header and nav bar from templates -->
+    <% var title = "IoT & IoE"; %>
+    <%- include partial_header.ejs %>
+
+        <!--your page content here-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 rd-pt-100">
+                    <button class="btn btn-block btn-info" data-toggle="modal" data-target="#brochure-modal">
+                        Brochure
+                    </button>
+                    <button class="btn btn-block btn-info" data-toggle="modal" data-target="#whitepaper-modal">
+                        White Paper
+                    </button>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>About IOT & IOE</h3>
+                            <h4>Internet of Things(IoT)</h4>
+                            <p>
+                                The Internet of Things (IoT) is the network of physical objects or "things" embedded with electronics, software, sensors and connectivity to enable it to achieve greater value and service by exchanging data with the manufacturer, operator and/or other connected devices. Each thing is uniquely identifiable through its embedded computing system but is able to interoperate within the existing Internet infrastructure.
+
+                            </p>
+                            <p>
+                                Things, in the IoT, can refer to a wide variety of devices such as heart monitoring implants, biochip transponders on farm animals, electric clams in coastal waters, automobiles with built-in sensors, or field operation devices that assist fire-fighters in search and rescue. These devices collect useful data with the help of various existing technologies and then autonomously flow the data between other devices. Current market examples include smart thermostat systems and washer/dryers that utilize Wi-Fi for remote monitoring.
+                            </p>
+                            <p>
+                                There are several planned or ongoing large-scale deployments of the IoT, to enable better management of cities and systems. For example, Songdo, South Korea, the first of its kind fully equipped and wired smart city, is near completion. Nearly everything in this city is planned to be wired, connected and turned into a constant stream of data that would be monitored and analyzed by an array of computers with little, or no human intervention.
+                            </p>
+                            <p>
+                                Source: <a href="http://en.wikipedia.org/wiki/Internet_of_Things">Wikipedia</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-center">Our Offer Pricing</h3>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-5">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="text-center text-info">Basic Plan</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td>Number of Sensors:</td>
+                                            <td>30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data Streams: </td>
+                                            <td>30kb/sec </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Price:</td>
+                                            <td>$30 / month</td>
+                                        </tr>
+                                    </table>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="text-center text-info">Premium Plan</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td>Number of Sensors:</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data Streams: </td>
+                                            <td>50kb/sec </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Price:</td>
+                                            <td>$50 / month</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 rd-pt-20" >
+                    <h4>Customer Accolade</h4>
+                    <blockquote class="blockquote">
+                        <p>“Every time I call for technical support I get answers to my questions and resolve my problems. It is the best technical support I have ever worked with.”</p>
+                        <footer><cite title="john-doe">Jenifer</cite></footer>
+                    </blockquote>
+                    <blockquote class="blockquote">
+                        <p>“Anything I ask from them, they will get it done. If they can’t do it, they find a way to do it.”</p>
+                        <footer><cite title="mike-smith">Serge</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="whitepaper-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Big Data Whitepaper</h4>
+              </div>
+              <div class="modal-body">
+                    <form id="get-whitepaper-form" action="/iot/get-whitepaper" method="get" class="form">
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input required type="text" class="form-control input-sm" name="fname">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input required type="text" class="form-control input-sm" name="lname">
+                        </div>    
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input required type="email" class="form-control input-sm" name="email">
+                        </div>                        
+                        </div>                        
+                    </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="get-whitepaper-btn" class="btn btn-primary">Download</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>    
+
+        <div class="modal fade" id="brochure-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Big Data Brochure</h4>
+              </div>
+              <div class="modal-body">
+                    <form id="get-brochure-form" action="/iot/get-brochure" method="get" class="form">
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input required type="text" class="form-control input-sm" name="fname">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input required type="text" class="form-control input-sm" name="lname">
+                        </div>    
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input required type="email" class="form-control input-sm" name="email">
+                        </div>                        
+                        </div>                        
+                    </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="get-brochure-btn" class="btn btn-primary">Download</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--include footer from templates -->
+    <% var jspath = "/js/iot.js"; %>
+    <%- include partial_footer.ejs %>
